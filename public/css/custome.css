@@ -1,25 +1,472 @@
-.navbar-custome{
+.navbar-custome {
     /* background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAD 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%) !important; */
-    background:black !important;
+    background: #FFFFFF !important;
     color: #FFFFFF !important;
     position: fixed !important;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999999;
+}
 
+.nav-link {
+    color: #FFD700 !important;
+    font-size: 18px;
 }
-.nav-link{
-    color: #FFFFFF !important;
-    font-size: 12px;
+
+.nav-link-option-1 {
+    color: #ce4e79 !important;
+    font-size: 18px;
 }
-.section-2{
+
+
+.section-2 {
     width: 100%;
     height: auto;
     background-color: #FFFFFF;
     color: black;
 }
-.home-page-secton-1{
+
+.home-page-secton-1 {
     /* background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAD 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%) !important; */
-    background:black !important;
-    color: white !important;
+    background: #FFFFFF !important;
+    color: #FFD700 !important;
+}
+
+.section-1-hero-content {
+    padding-top: 250px;
+    padding-bottom: 330px;
+}
+
+.navbar-img-custome {
+    max-width: 500px;
+    /* height: 100%; */
+    width: 400px;
+    height: auto;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+    border-radius: 3px;
+}
+
+.section-2-mission {
+    padding: 200px;
+}
+
+.mission-paragraph {
+    text-align: justify !important;
+}
+
+.mission-content-heading {
+    border-bottom: 1px solid black;
+}
+
+.mission-text {
+    text-align: left !important;
+}
+
+.nav-link-active {
+    color: #FFD700 !important;
+}
+
+.services-page-header-section {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #FFFFFF;
+    padding-top: 282px !important;
+    padding-bottom: 194px !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-page-header-section div div h1 {
+    /* font-family: 'Dancing Script', cursive !important; */
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 280;
+    letter-spacing: -.015em;
+    line-height: 110px;
+    max-width: 436px;
+    text-transform: capitalize;
+}
+
+.services-tab {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    width: 100% !important;
+    height: 100px;
+    background: transparent;
+    font-size: 24px;
+}
+
+.services-tab:hover {
+    /* transition-delay: 10s;
+    background: url("http://localhost:8000/images/service-bg.jpg") no-repeat center center;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #FFFFFF !important; */
+}
+
+.service-img {
+    background-size: 100%;
+    height: 90px !important;
+    width: 100% !important;
+    position: relative;
+}
+
+.service-img:hover {
+    background: url("http://localhost:8000/images/pexels-suzy-hazelwood-2123468.jpg ") no-repeat center center;
+    background-size: 100%;
+    height: inherit !important;
+    width: 100% !important;
+    /* z-index: 99999 !important; */
+    /* position: relative; */
+    color: #FFFFFF !important;
+}
+
+
+.services-span-left {
+    left: 10%;
+    position: absolute;
+}
+
+.services-span-right {
+    right: 10%;
+    position: absolute;
+}
+
+.services-span-lefft {
+    left: 10%;
+    position: absolute;
+}
+
+.service-img p {
+    padding-top: 50px;
+    height: inherit !important;
+    width: 100% !important;
+    position: inherit;
+    display: block;
+    padding: 29px 10px;
+}
+
+.section-1-repairs-hero-content {
+    padding-top: 250px;
+    padding-bottom: 330px;
+}
+
+.repair-page-content {
+    text-align: -webkit-center;
+}
+
+.repair-page-pragraph {
+    padding-bottom: 150px !important;
+}
+
+.dropzone {
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #dee2e6 !important;
+    border-image: none;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.repair-form-btn {
+    background-color: black;
+    color: #FFFFFF;
+}
+
+.contact-us-form-part {}
+
+.contact-us-form-part h2 {
+    text-align: center !important;
+}
+
+.section-2-heading h4 b {
+    letter-spacing: 4px;
+}
+
+.section-2-heading {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.section-2-ul {
+    /* padding: 50px; */
+    font-size: 18px;
+}
+
+.section-2-container {
+    padding: 100px;
+}
+
+.section-3 {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.section-3-text {
+    font-size: 18px !important;
+}
+
+.section-3-content {
+    padding: 100px !important;
+}
+
+/* .dropdown {
+    display: inline-block;
+    color: #FFD700 !important;
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.dropdown-content {
+    display: none;
+    align-items: flex-start;
+    position: absolute;
+    background-color: red;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    z-index: 999;
+} */
+
+/* .dropdown:hover .dropdown-content {
+    display: block;
+} */
+.service-part-1 {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1241px;
+    width: 100%;
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .section-1-hero-content {
+        padding-top: 70%;
+        padding-bottom: 50%;
+    }
+
+    .navbar-img-custome {
+        max-width: 201px;
+        height: auto;
+        width: 175px;
+    }
+
+    .services-page-header-section div div h1 {
+        font-size: 50px;
+        font-weight: 100;
+    }
+
+    .services-page-header-section {
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #FFFFFF;
+        padding-top: 140px !important;
+        padding-bottom: 94px !important;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-1-repairs-hero-content {
+        padding-top: 250px;
+        padding-bottom: 330px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .section-1-hero-content {
+        padding-top: 250px;
+        padding-bottom: 330px;
+    }
+
+    .navbar-img-custome {
+        max-width: 201px;
+        height: auto;
+        width: 182px;
+    }
+
+    .services-page-header-section div div h1 {
+        /* font-family: 'Dancing Script', cursive !important; */
+        font-size: 110px;
+        font-style: normal;
+        font-weight: 280;
+        letter-spacing: -.015em;
+        line-height: 110px;
+        max-width: 436px;
+        text-transform: capitalize;
+    }
+
+    .services-page-header-section {
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #FFFFFF;
+        padding-top: 140px !important;
+        padding-bottom: 50px !important;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-1-repairs-hero-content {
+        padding-top: 250px;
+        padding-bottom: 330px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .section-1-hero-content {
+        /* padding-top: 335px;
+        padding-bottom: 139px; */
+        padding-top: 40%;
+        padding-bottom: 20%;
+    }
+
+    /* .navbar-img-custome {
+        max-width: 280px;
+        height: 100%;
+        width: 266px;
+    } */
+    .services-page-header-section div div h1 {
+        /* font-family: 'Dancing Script', cursive !important; */
+        font-size: 88px;
+        font-style: normal;
+        font-weight: 280;
+        letter-spacing: -.015em;
+        line-height: 110px;
+        max-width: 436px;
+        text-transform: capitalize;
+    }
+
+    .services-page-header-section {
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #FFFFFF;
+        padding-top: 208px !important;
+        padding-bottom: 91px !important;
+        display: flex;
+        justify-content: space-between;
+        padding: 40PX 245px !important;
+        padding-top: 200px !important;
+        margin-top: 40px !important;
+    }
+
+    .section-1-repairs-hero-content {
+        padding-top: 250px;
+        padding-bottom: 330px;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .section-1-hero-content {
+        /* padding-top: 357px;
+        padding-bottom: 232px; */
+        padding-top: 40%;
+        padding-bottom: 25%;
+    }
+
+    .navbar-img-custome {
+        max-width: 100%;
+        height: 100%;
+        width: 297px;
+    }
+
+    .services-page-header-section div div h1 {
+        /* font-family: 'Dancing Script', cursive !important; */
+        font-size: 77px;
+        font-style: normal;
+        font-weight: 280;
+        letter-spacing: -.015em;
+        line-height: 110px;
+        max-width: 436px;
+        text-transform: capitalize;
+    }
+
+    .services-page-header-section {
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #FFFFFF;
+        padding-top: 282px !important;
+        padding-bottom: 194px !important;
+        display: flex;
+        justify-content: space-between;
+        padding: 40PX 245px !important;
+        padding-top: 200px !important;
+        margin-top: 40px !important;
+    }
+
+    .section-1-repairs-hero-content {
+        padding-top: 250px;
+        padding-bottom: 330px;
+    }
+
+}
+
+.footer-custome {
+    /* display: flex;
+    margin-top: auto !important; */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .section-1-hero-content {
+        padding-top: 25%;
+        padding-bottom: 15%;
+    }
+
+    .navbar-img-custome {
+        max-width: 500px;
+        width: 400px;
+        height: auto;
+
+    }
+
+    .services-page-header-section div div h1 {
+        /* font-family: 'Dancing Script', cursive !important; */
+        font-size: 110px;
+        font-style: normal;
+        font-weight: 280;
+        letter-spacing: -.015em;
+        line-height: 110px;
+        max-width: 436px;
+        text-transform: capitalize;
+    }
+
+    .services-page-header-section {
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #FFFFFF;
+        padding-top: 282px !important;
+        padding-bottom: 194px !important;
+        display: flex;
+        justify-content: space-between;
+        padding: 40PX 245px !important;
+        padding-top: 200px !important;
+        margin-top: 40px !important;
+    }
+
+    .section-1-repairs-hero-content {
+        padding-top: 250px;
+        padding-bottom: 220px;
+    }
+
 }
