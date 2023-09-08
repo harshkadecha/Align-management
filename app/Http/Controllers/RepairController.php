@@ -66,7 +66,21 @@ class RepairController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+
+            $data = $request->all();
+            return $data;
+
+
+        }catch(Exception $e){
+            $response = [
+                'status' => false,
+                'message' => 'Error : '. $e->getMessage(),
+                'data' => []
+            ];
+
+            return $response;
+        }
     }
 
     /**

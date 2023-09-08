@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DefaultController;
 use App\Http\Controllers\RepairController;
 use Illuminate\Support\Facades\Route;
 
@@ -112,3 +113,7 @@ Route::get('/option3/contact-us', function () {
 Route::resource('repairs-requests',RepairController::class);
 Route::post('/repair-form-img-upload',[RepairController::class,'imgUpload'])->name('repair-form-img-upload');
 Route::post('/repair-image-remove-upload',[RepairController::class,'removeUploads'])->name('repair-image-remove-upload');
+Route::post('/testimonial-data/store',[DefaultController::class,'testimonial'])->name('testimonial.store');
+Route::get('email-test',function(){
+    return view('email-template.index');
+});
