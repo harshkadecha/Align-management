@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EmailLogs;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -44,7 +45,7 @@ class RepairController extends Controller
             if (file_exists($oldImage)) {
                 unlink($oldImage);
                 Log::info("Old Image deleted : " . $oldImage);
-            }else{
+            } else {
                 return $request->name;
             }
             return $request->name;
@@ -66,17 +67,31 @@ class RepairController extends Controller
      */
     public function store(Request $request)
     {
-        try{
+        try {
 
-            $data = $request->all();
-            return $data;
+            $data1 = $request->all();
+            $data1 = $data1['data'];
+
+            $html = view('email-template.index', compact('data1'))->render();
+
+            $data = [];
+            $data += array('to' => $data1['email']);
+            // $data += array('to' => 'support@alignmgmtny.com');
+            $data += array('from' => env('MAIL_FROM_ADDRESS'));
+            $data += array('subject' => 'Repair Request');
+            $data += array('body' => $html);
+            $email = new EmailLogs;
+            $email->SaveData($data, true);
+
+            return true;
 
 
-        }catch(Exception $e){
+
+        } catch (Exception $e) {
             $response = [
                 'status' => false,
-                'message' => 'Error : '. $e->getMessage(),
-                'data' => []
+                'message' => 'Error : ' . $e->getMessage(),
+                'data' => [],
             ];
 
             return $response;

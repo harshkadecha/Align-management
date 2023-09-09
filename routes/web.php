@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\DefaultController;
+use App\Http\Controllers\EmailLogsController;
 use App\Http\Controllers\RepairController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     // return view('welcome');
@@ -62,7 +64,6 @@ Route::get('/option1/contact-us', function () {
     return view('option1.contact_us');
 })->name('option1.contact_us');
 
-
 //option2
 Route::get('/option2', function () {
     // return view('welcome');
@@ -107,13 +108,32 @@ Route::get('/option3/contact-us', function () {
     return view('option3.contact_us');
 })->name('option3.contact_us');
 
-
-
-
-Route::resource('repairs-requests',RepairController::class);
-Route::post('/repair-form-img-upload',[RepairController::class,'imgUpload'])->name('repair-form-img-upload');
-Route::post('/repair-image-remove-upload',[RepairController::class,'removeUploads'])->name('repair-image-remove-upload');
-Route::post('/testimonial-data/store',[DefaultController::class,'testimonial'])->name('testimonial.store');
-Route::get('email-test',function(){
+Route::resource('repairs-requests', RepairController::class);
+Route::post('/repair-form-img-upload', [RepairController::class, 'imgUpload'])->name('repair-form-img-upload');
+Route::post('/repair-image-remove-upload', [RepairController::class, 'removeUploads'])->name('repair-image-remove-upload');
+Route::post('/testimonial-data/store', [DefaultController::class, 'testimonial'])->name('testimonial.store');
+Route::get('email-test', function () {
     return view('email-template.index');
 });
+
+Route::middleware(['auth'])->group(function () {
+    // Route::get('/dashboard', [Controller::class,'index'])->name('dashboard');
+    Route::get('admin',function(){
+        return redirect()->route('dashboard');
+    });
+    Route::get('/admin/dashboard', [DefaultController::class,'dashboard'])->name('dashboard');
+    Route::resource('email-logs', EmailLogsController::class);
+    Route::get('/get-emails',[EmailLogsController::class,'getEmails'] )->name('get_emails');
+    // Route::get('/get-emails/{id}', 'EmailLogsController@sendMail')->name('send-mail');
+    Route::get('/date-range/{date_range}', [EmailLogsController::class,'dateRange'])->name('dateRange');
+
+    Route::get('/adminEdit', [DefaultController::class,'adminEdit'])->name('admin-edit');
+    Route::post('/adminUpdate', [DefaultController::class,'adminUpdate'])->name('admin-update');
+    Route::post('/resetpassword1', [DefaultController::class,'resetpassword1'])->name('admin-resetpassword1');
+
+
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

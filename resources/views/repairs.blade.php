@@ -62,13 +62,13 @@
             <div class="container mt-5">
                 <form class="form row" action="#" id="repair_request_form">
                     <div class="form-group mb-4 col-sm-12 col-md-6">
-                        <label for="exampleInputFirstName1">Full Name(Requester):</label>
-                        <input type="text" class="form-control" id="exampleInputFirstName1" name="f_name"
+                        <label for="name">Full Name(Requester):</label>
+                        <input type="text" class="form-control" id="name" name="f_name"
                             aria-describedby="emailHelp" placeholder="Enter Full Name">
                         <small id="emailHelp" class="form-text text-muted"></small>
                     </div>
                     <div class="form-group mb-4 col-sm-12 col-md-6">
-                        <label for="exampleInputEmail1">Prefferred Date amd Time for Maintainance:</label>
+                        <label for="fp-range">Prefferred Date amd Time for Maintainance:</label>
                         <input type="text" id="fp-range" class="form-control flatpickr-date-time" name="fp-range"
                             placeholder="YYYY-MM-DD" required />
                         <small id="emailHelp" class="form-text text-muted"></small>
@@ -99,28 +99,28 @@
                         <label class="form-label">Urgency Level:</label><br />
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="urgency_level" id="urgencyLevel1"
-                                value="option1">
+                                value="=low">
                             <label class="form-check-label" for="urgencyLevel1">
                                 Low
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="urgency_level" id="UrgencyLevel1"
-                                value="option1" checked>
+                                value="medium" checked>
                             <label class="form-check-label" for="urgencyLevel1">
                                 Medium
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="urgency_level" id="UrgencyLevel1"
-                                value="option1">
+                                value="high">
                             <label class="form-check-label" for="UrgencyLevel1">
                                 High
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="urgency_level" id="UrgencyLevel1"
-                                value="option1">
+                                value="urgent">
                             <label class="form-check-label" for="UrgencyLevel1">
                                 Urgent
                             </label>
@@ -131,14 +131,14 @@
                         <label class="form-label">Permission to Enter:</label><br />
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="permission" id="permission"
-                                value="option1" checked>
+                                value="yes" checked>
                             <label class="form-check-label" for="exampleRadios1">
                                 Yes, you have permission to enter the premises in our absence.
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="permission" id="permission"
-                                value="option1">
+                                value="no">
                             <label class="form-check-label" for="exampleRadios1">
                                 No, please schedule a specific time with us.
                             </label>
@@ -181,45 +181,45 @@
                     <div class="form-group mb-4 col-sm-12 col-md-6">
                         <label for="exampleInputFirstName1">Maintainance Type:</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="plumbing" name="maintainance"
-                                id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
+                            <input class="form-check-input" type="radio" name="maintainance" id="maintainance"
+                                value="plumbing" checked>
+                            <label class="form-check-label" for="urgencyLevel1">
                                 Plumbing
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="electric" name="maintainance"
-                                id="defaultCheck2">
-                            <label class="form-check-label" for="defaultCheck2">
-                                Electrical
+                            <input class="form-check-input" type="radio" name="maintainance" id="maintainance"
+                                value="electric">
+                            <label class="form-check-label" for="urgencyLevel1">
+                                Electric
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="HVAC" name="maintainance"
-                                id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
+                            <input class="form-check-input" type="radio" name="maintainance" id="maintainance"
+                                value="hvac">
+                            <label class="form-check-label" for="urgencyLevel1">
                                 HVAC
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="appliance_repair" name="maintainance"
-                                id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
+                            <input class="form-check-input" type="radio" name="maintainance" id="maintainance"
+                                value="appliance_repair">
+                            <label class="form-check-label" for="urgencyLevel1">
                                 Appliance Repair
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="general_repairs" name="maintainance"
-                                id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
+                            <input class="form-check-input" type="radio" name="maintainance" id="maintainance"
+                                value="general_repairs">
+                            <label class="form-check-label" for="urgencyLevel1">
                                 General Repairs
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="other" name="maintainance"
-                                id="defaultCheck1">
-                            <label class="form-check-label" for="defaultCheck1">
-                                Other (Please Specify)
+                            <input class="form-check-input" type="radio" name="maintainance" id="maintainance"
+                                value="other">
+                            <label class="form-check-label" for="urgencyLevel1">
+                                Other(Please Specify in Additional Note)
                             </label>
                         </div>
                         <small id="emailHelp" class="form-text text-muted"></small>
@@ -356,23 +356,19 @@
             e.preventDefault();
             if ($("#repair_request_form").valid() == true) {
 
-                // let message = $('#exampleFormControlTextarea1').val();
-                // var data = $('#repair_request_form').serialize();
-
                 var data = {
                     name: $("#name").val(),
-                    email: $("#email").val(),
-                    preffred_time : $('#fp-range').val(),
-                    contact_number:$('#contact_number').val(),
-                    address:$('#address').val(),
+                    email: $("#email_address").val(),
+                    preffred_time: $('#fp-range').val(),
+                    contact_number: $('#contact_number').val(),
+                    address: $('#address').val(),
                     description: $('#description').val(),
-                    urgency_level : $('input[name="urgency_level"]:checked').val(),
-                    permission : $('input[name="=permission"]:checked').val(),
-                    attachment : $('#attachment').val(),
-                    maintainance_type : $("input[type='checkbox']").val(),
-                    additonal_note : $('#additional').val(),
+                    urgency_level: $("input[name='urgency_level']:checked").val(),
+                    permission: $("input[name='permission']:checked").val(),
+                    attachment: $('#attachement').val(),
+                    maintenance: $("input[name='maintainance']:checked").val(),
+                    additonal_note: $('#additional').val(),
                 };
-
 
                 let url = "{{ route('repairs-requests.store') }}";
                 var token = $("meta[name='csrf-token']").attr("content");

@@ -291,19 +291,24 @@
 
     .service-img p {
         align-items: center !important;
-        display: flex!important;
+        display: flex !important;
     }
 
     .service-img p .services-span-left {
         font-size: 16px;
     }
-    .service-img p span{
+
+    .service-img p span {
         font-size: 15px !important;
     }
-    .service-img p span svg{
+
+    .service-img p span svg {
         width: 35px;
     }
 
+    .section-2-mission {
+        padding: 30px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -344,20 +349,28 @@
         padding-top: 250px;
         padding-bottom: 330px;
     }
+
     .service-img p {
         align-items: center !important;
-        display: flex!important;
+        display: flex !important;
     }
 
     .service-img p .services-span-left {
         font-size: 22px;
     }
-    .service-img p span{
+
+    .service-img p span {
         font-size: 22px !important;
     }
-    .service-img p span svg{
+
+    .service-img p span svg {
         width: 35px;
     }
+
+    .section-2-mission {
+        padding: 200px;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -405,18 +418,25 @@
 
     .service-img p {
         align-items: center !important;
-        display: flex!important;
+        display: flex !important;
     }
 
     .service-img p .services-span-left {
         font-size: 24px;
     }
-    .service-img p span{
+
+    .service-img p span {
         font-size: 24px !important;
     }
-    .service-img p span svg{
+
+    .service-img p span svg {
         width: 35px;
     }
+
+    .section-2-mission {
+        padding: 100px;
+    }
+
 
 }
 
@@ -466,24 +486,24 @@
 
     .service-img p {
         align-items: center !important;
-        display: flex!important;
+        display: flex !important;
     }
 
     .service-img p .services-span-left {
         font-size: 22px;
     }
-    .service-img p span{
+
+    .service-img p span {
         font-size: 22px !important;
     }
-    .service-img p span svg{
+
+    .service-img p span svg {
         width: 35px;
     }
 
-}
-
-.footer-custome {
-    /* display: flex;
-    margin-top: auto !important; */
+    .section-2-mission {
+        padding: 119px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -531,17 +551,24 @@
 
     .service-img p {
         align-items: center !important;
-        display: flex!important;
+        display: flex !important;
     }
 
     .service-img p .services-span-left {
         font-size: 22px;
     }
-    .service-img p span{
+
+    .service-img p span {
         font-size: 22px !important;
     }
-    .service-img p span svg{
+
+    .service-img p span svg {
         width: 35px;
     }
+
+    .section-2-mission {
+        padding: 200px;
+    }
+
 
 }
