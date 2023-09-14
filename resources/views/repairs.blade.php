@@ -41,7 +41,7 @@
                 <h2 class="text-center pt-5 pb-5 request-page-content-heading">REPAIR REQUEST FORM</h2>
                 <hr />
                 <div class="row m-0 mt-4 d-flex align-items-center justify-content-center repair-page-content">
-                    <p>At Concord we firmly believe in providing quality service to our residents. It is our goal to keep
+                    <p>At Align Management we firmly believe in providing quality service to our residents. It is our goal to keep
                         your homes in good repair at all times. Please fill out the information below and our maintenance
                         department will contact you as soon as possible. Please allow 2 business days for processing and
                         review for all non-emergency repairs. If the damage or defects were due to the negligence of you or
@@ -383,15 +383,22 @@
                     encode: true,
                     success: function(response) {
                         console.log(response);
-                        // if (response.status == true) {
-                        //     toastr.success(
-                        //         response.message
-                        //     );
-                        // } else {
-                        //     toastr.error(
-                        //         response.message
-                        //     );
-                        // }
+                        if (response.status == true) {
+
+                            Dropzone.forElement('#kt_dropzonejs_example_1').removeAllFiles(true);
+                            $('#repair_request_form')[0].reset();
+                            $('#additional').val("");
+                            $('#attachement').val("");
+
+                            toastr.success(
+                                response.message
+                            );
+
+                        } else {
+                            toastr.error(
+                                response.message
+                            );
+                        }
 
                     }
                 });

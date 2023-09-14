@@ -83,7 +83,13 @@ class RepairController extends Controller
             $email = new EmailLogs;
             $email->SaveData($data, true);
 
-            return true;
+            $response = [
+                'status' => true,
+                'message' => 'Thank You for choosing us we will contat you as soon as possible..',
+                'data' => [],
+            ];
+
+            return $response;
 
 
 
